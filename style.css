@@ -1,0 +1,44 @@
+#gameCont .row {
+  height: 26px;
+}
+#gameCont .column {
+  border: 1px solid white;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+#gameCont #startGame {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 230px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+#gameCont #startGame span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#gameCont #startGame span:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+#gameCont #startGame:hover span {
+  padding-right: 40px;
+}
+#gameCont #startGame:hover span:after {
+  opacity: 1;
+  right: 0;
+}

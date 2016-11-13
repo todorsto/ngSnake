@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <title>Play Snake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body ng-cloak ng-app="snakeApp">
+
+<div id="gameCont" ng-controller="snakeController">
+    <h2 class="score">Your Score: {{score}}</h2>
+    <div class="row" ng-repeat="column in board">
+        <div class="column" ng-style="{'background-color': setStyling($parent.$index, $index)}"
+             ng-repeat="row in column track by $index"></div>
+    </div>
+    <button id="startGame" style="vertical-align:middle" ng-click="startGame()"><span>Start Game</span></button>
+</div>
+</div>
+
+
+<script type="text/javascript" src="ngSnake.js"></script>
+</body>
+
+</html>
